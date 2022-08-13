@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果展示</title>
+</head>
+<body>
+    <center>
+        <form action="/gets/" method="post">
+        <h1>搜索结果展示</h1>
+        <hr>
+        <table border="1px" width="400px">
+            <tr style="text-align:center">
+                <th>id</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>城市</th>
+            </tr>
+            {% for i in items %}
+            <tr style="text-align:center">
+                <td>{{ i.id }}</td>
+                <td>{{ i.xingming }}</td>
+                <td>{{ i.nianling }}</td>
+                <td>{{ i.chengshi }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        </form>
+    </center>
+</body>
+</html>
